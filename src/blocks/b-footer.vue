@@ -1,7 +1,7 @@
 <template>
 	<footer class="b-footer">
 		<div class="b-footer_wrapper">
-			Footer
+			made by pdrazewski
 		</div>
 	</footer>
 </template>

@@ -1,7 +1,9 @@
 <template>
 	<div class="c-codeEditor">
-		<input type="text" v-model="gistId" />
-		<button v-on:click="getGist">Load gist</button>
+		<div class="c-codeEditor_gistForm">
+			<input type="text" v-model="gistId" class="c-codeEditor_gistId"/>
+			<button v-on:click="getGist" class="c-codeEditor_gistSubmit">Load gist</button>
+		</div>
 		<div v-if="show">
 			<code v-html="gistContent"></code>
 		</div>
