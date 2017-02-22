@@ -12,6 +12,7 @@
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "find-in-files": "^0.3.1",
+    "firebase": "^3.6.10",
     "gist-embed": "^2.6.0",
     "jsonfile": "^2.4.0",
     "jsonp": "^0.2.1",

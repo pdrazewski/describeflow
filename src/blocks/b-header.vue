@@ -5,9 +5,9 @@
 				<h1>Gistscription</h1>
 			</div>
 			<nav class="m-menu">
-				<a href="#">Home</a>
-				<a href="#">My descriptions</a>
-				<a href="#">Add + </a>
+				<a href="#">All docs </a>
+				<a href="#">My docs</a>
+				<a href="#">Add new</a>
 				<a href="#">Login</a>
 			</nav>
 		</div>
