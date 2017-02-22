@@ -2,9 +2,14 @@
 	<viewBase class="v-index">
 		<template slot>
 			<div class="b-mainWrapper_secondary">
+
 				<component-editor></component-editor>
 			</div>
 			<div class="b-mainWrapper_primary">
+				<p v-on:click="signIn">Login</p>
+				<div v-if="logged">
+					{{user}}: {{token}}
+				</div>
 				<h1>Sed rhoncus purus a ex lacinia blandit</h1>
 				To add a new element to the HTML DOM, you must create the element (element node) first, and then append it to an existing element. <br> 
 
@@ -39,8 +44,30 @@ Sed rhoncus purus a ex lacinia blandit. Nam non euismod est. Vivamus id accumsan
 			viewBase,
 			componentEditor
 		},
-		created() {
-			console.log(appFire)
+		data() {
+			return {
+				token: '',
+				logged: false,
+				user: false
+			}
+		},
+		methods: {
+			signIn() {
+				var provider = new Firebase.auth.GoogleAuthProvider()
+				Firebase.auth().signInWithPopup(provider).then(function(result) {
+					var token = result.credential.accessToken
+					var user = result.user
+					this.token = token
+					this.user = user.displayName
+					this.logged = true
+					console.log(token, user)
+				}.bind(this)).catch(function(error) {
+					var errorCode = error.code
+					var errorMessage = error.message
+					var email = error.email
+					var credential = error.credential
+				})
+			}
 		}
 	}
 </script>
