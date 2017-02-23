@@ -6,23 +6,10 @@
 </template>
 
 <script>
+	/* eslint-disable no-unused-vars, camelcase, func-call-spacing, no-unexpected-multiline */
+	/* eslint quotes: [0, { "avoidEscape": true }] */
 	import viewBase from './v-base'
 	export default {
-		name: 'view-code-view',
-		data() {
-			return {
-				code: {
-					name,
-					gist,
-					docs: {
-						line: 12,
-						content: '123'
-					}
-				}
-			}
-		},
-		components: {
-			viewBase
-		}
+		name: 'view-code-add'
 	}
 </script>

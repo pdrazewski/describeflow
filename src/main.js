@@ -9,6 +9,7 @@ import store from './store/store.js'
 import index from './views/v-index'
 import codeList from './views/v-code-list'
 import codeView from './views/v-code-view'
+import codeAdd from './views/v-code-add'
 
 Vue.use(VueRouter)
 
@@ -16,7 +17,8 @@ const router = new VueRouter({
 	routes: [
 		{ path: '/', component: index },
 		{ path: '/code-list', component: codeList },
-		{ path: '/code-view', component: codeView }
+		{ path: '/code-view', component: codeView },
+		{ path: '/code-add', component: codeAdd }
 	]
 })
 
