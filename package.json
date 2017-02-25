@@ -16,6 +16,7 @@
     "gist-embed": "^2.6.0",
     "jsonfile": "^2.4.0",
     "jsonp": "^0.2.1",
+    "marked": "^0.3.6",
     "pdfkit": "^0.8.0",
     "prismjs": "^1.6.0",
     "underscore": "^1.8.3",

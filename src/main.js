@@ -26,3 +26,12 @@ new Vue({
 	store,
 	router
 }).$mount('#app')
+
+/*
+Logowanie w store
+Zapisywanie wpisów po name i id
+Powiązanie wpisu z gist ID
+Gist ID line numbers powiązane z komentarzami oraz disqus
+Publiczne, prywatne gisty
+Publish link
+*/

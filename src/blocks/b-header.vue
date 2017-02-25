@@ -2,7 +2,7 @@
 	<header class="b-header">
 		<div class="b-header_primary">
 			<div class="m-logo">
-				<h1>Gistscription</h1>
+				<h1><router-link to="/">Gistscription</router-link></h1>
 			</div>
 			<ul class="m-menu">
 				<li class="m-menu_item">

@@ -17,7 +17,7 @@
 <script>
 	import jsonp from 'jsonp'
 	export default {
-		name: 'component-codeEditor',
+		name: 'component-code',
 		data () {
 			return {
 				show: false,
@@ -28,7 +28,12 @@
 		},
 		methods: {
 			lineClickHandler(number) {
-				console.log(number)
+				let numbers = document.querySelectorAll('.js-line-number')
+				numbers.forEach(function(number) {
+					number.parentElement.classList.remove('is-active-row')
+				})
+				number.parentElement.classList.add('is-active-row')
+				this.$store.dispatch('gistSetLine', number.dataset.lineNumber)
 			},
 			lineClickMapper() {
 				let numbers = document.querySelectorAll('.js-line-number')
@@ -48,6 +53,7 @@
 						this.gistContent = data.div
 						this.gistStyle = data.stylesheet
 						setTimeout(this.lineClickMapper, 500)
+						this.$store.dispatch('gistSetActive', this.gistId)
 					}
 					this.show = true
 				}.bind(this))
