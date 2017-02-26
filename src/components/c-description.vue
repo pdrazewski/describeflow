@@ -1,7 +1,7 @@
 <template>
 	<div>
 		{{gistId}} <br>
-		{{activeLine}} <br><br><br>
+		{{activeFile}}: {{activeLine}} <br><br><br>
 		<textarea :value="input" @input="update"></textarea>
 		<div v-html="compiledMarkdown" class="markdown-body"></div>
 	</div>
@@ -26,6 +26,9 @@
 			},
 			activeLine() {
 				return this.$store.state.gist.line
+			},
+			activeFile() {
+				return this.$store.state.gist.file
 			}
 		},
 		methods: {

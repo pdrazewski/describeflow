@@ -7,7 +7,8 @@ export default new Vuex.Store({
 	state: {
 		gist: {
 			active: '',
-			line: ''
+			line: '',
+			file: ''
 		}
 	},
 	mutations: {
@@ -16,6 +17,9 @@ export default new Vuex.Store({
 		},
 		GIST_SET_LINE (state, line) {
 			state.gist.line = line
+		},
+		GIST_SET_FILE (state, file) {
+			state.gist.file = file
 		}
 	},
 	actions: {
@@ -24,6 +28,9 @@ export default new Vuex.Store({
 		},
 		gistSetLine({commit}, line) {
 			commit('GIST_SET_LINE', line)
+		},
+		gistSetFile({commit}, file) {
+			commit('GIST_SET_FILE', file)
 		}
 	}
 })

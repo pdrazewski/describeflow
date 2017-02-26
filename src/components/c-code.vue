@@ -29,11 +29,12 @@
 		methods: {
 			lineClickHandler(number) {
 				let numbers = document.querySelectorAll('.js-line-number')
-				numbers.forEach(function(number) {
-					number.parentElement.classList.remove('is-active-row')
+				numbers.forEach(function(nr) {
+					nr.parentElement.classList.remove('is-active-row')
 				})
 				number.parentElement.classList.add('is-active-row')
 				this.$store.dispatch('gistSetLine', number.dataset.lineNumber)
+				this.$store.dispatch('gistSetFile', number.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.querySelector('.gist-meta a').getAttribute('href'))
 			},
 			lineClickMapper() {
 				let numbers = document.querySelectorAll('.js-line-number')
