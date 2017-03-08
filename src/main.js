@@ -18,7 +18,7 @@ const router = new VueRouter({
 		{ path: '/', component: index },
 		{ path: '/code-list', component: codeList },
 		{ path: '/code-view', component: codeView },
-		{ path: '/code-add', component: codeAdd }
+		{ path: '/code-add/:id?', component: codeAdd }
 	]
 })
 

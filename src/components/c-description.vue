@@ -1,7 +1,8 @@
 <template>
 	<div>
 		{{gistId}} <br>
-		{{activeFile}}: {{activeLine}} <br><br><br>
+		<textarea>{{activeFile}}</textarea>
+		{{activeLine}} <br><br><br>
 		<textarea :value="input" @input="update"></textarea>
 		<div v-html="compiledMarkdown" class="markdown-body"></div>
 	</div>
