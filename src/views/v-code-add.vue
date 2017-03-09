@@ -2,8 +2,6 @@
 	<viewBase class="v-index">
 		<template slot>
 			<div class="b-mainWrapper_secondary">
-				{{newKey}}{{saved}}
-				<button @click="save">ZApisz</button>
 				<component-code></component-code>
 			</div>
 			<div class="b-mainWrapper_primary">
