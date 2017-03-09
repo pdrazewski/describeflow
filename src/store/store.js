@@ -8,6 +8,7 @@ export default new Vuex.Store({
 		gist: {
 			active: '',
 			line: '',
+			content: '',
 			file: ''
 		}
 	},
@@ -17,6 +18,9 @@ export default new Vuex.Store({
 		},
 		GIST_SET_LINE (state, line) {
 			state.gist.line = line
+		},
+		GIST_SET_LINE_CONTENT (state, content) {
+			state.gist.content = content
 		},
 		GIST_SET_FILE (state, file) {
 			state.gist.file = file
@@ -28,6 +32,9 @@ export default new Vuex.Store({
 		},
 		gistSetLine({commit}, line) {
 			commit('GIST_SET_LINE', line)
+		},
+		gistSetLineContent({commit}, content) {
+			commit('GIST_SET_LINE_CONTENT', content)
 		},
 		gistSetFile({commit}, file) {
 			commit('GIST_SET_FILE', file)

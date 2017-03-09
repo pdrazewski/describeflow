@@ -38,6 +38,9 @@
 			activeLine() {
 				return this.$store.state.gist.line
 			},
+			activeLineContent() {
+				return this.$store.state.gist.content
+			},
 			activeFile() {
 				return this.$store.state.gist.file
 			}
@@ -55,7 +58,8 @@
 						content: {
 							file: this.activeFile,
 							lineNumber: this.activeLine,
-							data: this.input
+							lineContent: this.activeLineContent,
+							desc: this.input
 						}
 					}
 				}

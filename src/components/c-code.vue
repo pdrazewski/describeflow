@@ -34,6 +34,7 @@
 				})
 				number.parentElement.classList.add('is-active-row')
 				this.$store.dispatch('gistSetLine', number.dataset.lineNumber)
+				this.$store.dispatch('gistSetLineContent', number.parentElement.innerText.trim())
 				this.$store.dispatch('gistSetFile', number.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.querySelector('.gist-meta a').getAttribute('href'))
 			},
 			lineClickMapper() {
