@@ -43,6 +43,9 @@
 			},
 			activeFile() {
 				return this.$store.state.gist.file
+			},
+			userId() {
+				return this.$store.state.user.id
 			}
 		},
 		methods: {
@@ -51,7 +54,7 @@
 			}, 300),
 			save() {
 				let data = {
-					db: 'gists',
+					db: 'private/' + this.userId + '/gists',
 					key: this.newKey,
 					data: {
 						gistId: this.gistId,
