@@ -13,7 +13,7 @@
 						<a href="#" v-on:click.prevent="signIn">Login</a>
 					</template>
 					<template v-else>
-						<a href="#" v-on:click.prevent="signOut">Welcome {{user}}. Logout</a>
+						<a href="#" v-on:click.prevent="signOut">Welcome {{logged}}. Logout</a>
 					</template>
 				</li>
 			</ul>
@@ -31,7 +31,6 @@
 		data() {
 			return {
 				token: '',
-				logged: false,
 				user: false,
 				menu: [{
 					path: 'code-list',
@@ -42,6 +41,11 @@
 				}]
 			}
 		},
+		computed: {
+			logged() {
+				return this.$store.state.user.id
+			}
+		},
 		methods: {
 			signIn() {
 				var provider = new Firebase.auth.GoogleAuthProvider()
@@ -50,7 +54,6 @@
 					var user = result.user
 					this.token = token
 					this.user = user.displayName
-					this.logged = true
 					let userData = {
 						provider: provider.providerId,
 						name: user.displayName,
@@ -68,7 +71,7 @@
 			},
 			signOut() {
 				Firebase.auth().signOut().then(function() {
-					this.logged = false
+					this.$store.dispatch('userSetId', false)
 				}.bind(this))
 			}
 		}
