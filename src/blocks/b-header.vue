@@ -62,6 +62,7 @@
 					}
 					this.$store.dispatch('userSetId', user.uid)
 					firebase.appFire.database().ref('users/' + user.uid).set(userData)
+					console.log(result)
 				}.bind(this)).catch(function(error) {
 					var errorCode = error.code
 					var errorMessage = error.message
