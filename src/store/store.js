@@ -5,6 +5,9 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
 	state: {
+		user: {
+			id: ''
+		},
 		gist: {
 			active: '',
 			line: '',
@@ -24,6 +27,9 @@ export default new Vuex.Store({
 		},
 		GIST_SET_FILE (state, file) {
 			state.gist.file = file
+		},
+		USER_SET_ID(state, id) {
+			state.user.id = id
 		}
 	},
 	actions: {
@@ -38,6 +44,9 @@ export default new Vuex.Store({
 		},
 		gistSetFile({commit}, file) {
 			commit('GIST_SET_FILE', file)
+		},
+		userSetId({commit}, id) {
+			commit('USER_SET_ID', id)
 		}
 	}
 })

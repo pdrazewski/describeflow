@@ -10,10 +10,10 @@
 					 	<span>{{item.name}}</span>
 					 </router-link>
 					 <template v-if="!logged">
-						<a href="#" v-on:click="signIn">Login</a>
+						<a href="#" v-on:click.prevent="signIn">Login</a>
 					</template>
 					<template v-else>
-						<a href="#" v-on:click="signOut">Welcome {{user}}. Logout</a>
+						<a href="#" v-on:click.prevent="signOut">Welcome {{logged}}. Logout</a>
 					</template>
 				</li>
 			</ul>
@@ -25,12 +25,12 @@
 	/* eslint-disable no-unused-vars, camelcase, func-call-spacing, no-unexpected-multiline */
 	/* eslint quotes: [0, { "avoidEscape": true }] */
 	import {Firebase} from '../firebase'
+	import firebase from '../firebase.js'
 	export default {
 		name: 'header',
 		data() {
 			return {
 				token: '',
-				logged: false,
 				user: false,
 				menu: [{
 					path: 'code-list',
@@ -41,6 +41,11 @@
 				}]
 			}
 		},
+		computed: {
+			logged() {
+				return this.$store.state.user.id
+			}
+		},
 		methods: {
 			signIn() {
 				var provider = new Firebase.auth.GoogleAuthProvider()
@@ -49,8 +54,14 @@
 					var user = result.user
 					this.token = token
 					this.user = user.displayName
-					this.logged = true
-					console.log(token, user)
+					let userData = {
+						provider: provider.providerId,
+						name: user.displayName,
+						email: user.email,
+						token: token
+					}
+					this.$store.dispatch('userSetId', user.uid)
+					firebase.appFire.database().ref('users/' + user.uid).set(userData)
 				}.bind(this)).catch(function(error) {
 					var errorCode = error.code
 					var errorMessage = error.message
@@ -60,7 +71,7 @@
 			},
 			signOut() {
 				Firebase.auth().signOut().then(function() {
-					this.logged = false
+					this.$store.dispatch('userSetId', false)
 				}.bind(this))
 			}
 		}
