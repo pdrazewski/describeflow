@@ -2,18 +2,32 @@
 	<header class="b-header">
 		<div class="b-header_primary">
 			<div class="m-logo">
-				<h1><router-link to="/">Gistscription</router-link></h1>
+				<h1><router-link to="/">_ DEFE</router-link></h1>
 			</div>
 			<ul class="m-menu">
-				<li class="m-menu_item">
-					 <router-link v-for="(item, index) in menu" :to="'/' + item.path">
+				<li class="m-menu_item" v-for="(item, index) in menu">
+					 <router-link  :to="'/' + item.path">
 					 	<span>{{item.name}}</span>
 					 </router-link>
-					 <template v-if="!logged">
-						<a href="#" v-on:click.prevent="signIn">Login</a>
+				</li>
+			</ul>
+			<ul class="m-menu m-menu_user">
+					<template v-if="!logged">
+						<li class="m-menu_item"><a href="#" v-on:click.prevent="signIn">Login</a></li>
 					</template>
 					<template v-else>
-						<a href="#" v-on:click.prevent="signOut">Welcome {{logged}}. Logout</a>
+						<li class="m-menu_item"><p>Welcome {{logged}}</p></li>
+						<li class="m-menu_item">
+							<router-link  :to="'code-add'">
+						 		Add code
+						 	</router-link>
+					 	</li>
+					 	<li class="m-menu_item">
+							<router-link  :to="'code-add'">
+						 		Your profile
+						 	</router-link>
+					 	</li>
+						<li class="m-menu_item"><a href="#" class="is-secondary" v-on:click.prevent="signOut">Logout</a></li>
 					</template>
 				</li>
 			</ul>
@@ -34,10 +48,13 @@
 				user: false,
 				menu: [{
 					path: 'code-list',
-					name: 'All docs'
+					name: 'Most popular'
+				}, {
+					path: 'code-list',
+					name: 'Newest'
 				}, {
 					path: 'code-add',
-					name: 'Add new'
+					name: 'Categories'
 				}]
 			}
 		},
@@ -60,7 +77,7 @@
 						email: user.email,
 						token: token
 					}
-					this.$store.dispatch('userSetId', user.uid)
+					this.$store.dispatch('userSetId', user.displayName)
 					firebase.appFire.database().ref('users/' + user.uid).set(userData)
 					console.log(result)
 				}.bind(this)).catch(function(error) {
