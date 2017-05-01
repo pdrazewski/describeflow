@@ -1,6 +1,6 @@
 <template>
 	<footer class="b-footer">
-		<div class="b-footer_wrapper">
+		<div class="b-footer_wrapper is-content">
 		by defe
 		</div>
 	</footer>

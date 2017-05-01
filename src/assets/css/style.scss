@@ -32,5 +32,18 @@ body {
 	}
 }
 
-
+.is-content {
+    margin: 0 auto;
+    max-width: $wrapperWidth;
+    padding: 0 20px;
+    @include breakpoint(tablet) {
+        padding: 0 40px;
+    }
+    @include breakpoint(desktop) {
+        padding: 0 80px;
+    }
+    @include breakpoint(desktop_big) {
+        padding: 0 100px;
+    }
+}
 

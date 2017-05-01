@@ -1,6 +1,6 @@
 <template>
 	<header class="b-header">
-		<div class="b-header_primary">
+		<div class="b-header_primary is-content">
 			<div class="m-logo">
 				<h1><router-link to="/">_ DEFE</router-link></h1>
 			</div>

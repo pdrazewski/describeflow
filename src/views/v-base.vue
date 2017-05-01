@@ -1,7 +1,7 @@
 <template>
 	<div class="b-mainWrapper">
 		<block-header></block-header>
-		<div class="b-mainWrapper_content">
+		<div class="b-mainWrapper_content is-content">
 			<slot></slot>
 		</div>
 		<block-footer></block-footer>
