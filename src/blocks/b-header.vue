@@ -13,13 +13,18 @@
 			</ul>
 			<ul class="m-menu m-menu_user">
 					<template v-if="!logged">
+						<li class="m-menu_item">
+							<router-link  :to="'code-add'">
+						 		Add new content
+						 	</router-link>
+					 	</li>
 						<li class="m-menu_item"><a href="#" v-on:click.prevent="signIn">Login</a></li>
 					</template>
 					<template v-else>
 						<li class="m-menu_item"><p>Welcome {{logged}}</p></li>
 						<li class="m-menu_item">
 							<router-link  :to="'code-add'">
-						 		Add code
+						 		Add new content
 						 	</router-link>
 					 	</li>
 					 	<li class="m-menu_item">

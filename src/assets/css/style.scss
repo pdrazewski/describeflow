@@ -17,6 +17,9 @@ $wrapperWidth: 100%;
 @import "./components/_codeEditor";
 @import "./components/_markdownBody";
 
+//plugins
+@import "./plugins/_codemirror";
+
 html, body {
     height:100%;
 }
@@ -47,3 +50,6 @@ body {
     }
 }
 
+.is-active-row {
+    background: yellow;
+}

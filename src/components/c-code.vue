@@ -1,21 +1,34 @@
 <template>
 	<div class="c-codeEditor">
-		<div class="c-codeEditor_gistForm">
-			<input type="text" v-model="gistId" class="c-codeEditor_gistId"/>
-			<button v-on:click="getGist" class="c-codeEditor_gistSubmit">Load gist</button>
-		</div>
-		<div v-if="show">
-			<code v-html="gistContent"></code>
-		</div>
-		<div v-else>
-			Loading...
-		</div>
-		<link :href="gistStyle" rel="stylesheet" />
+		<textarea id="myomy">.b-rootBlock {
+		    display: none; 
+		    @include breakpoint(tablet) {
+		        display: block;
+		    }
+		    &_child {
+		        display: none;
+		        font-size: 12px;
+		        list-style: none;
+		        &:hover {
+		            color: $cl-primary;
+		            font-family: $font-primary;
+		            cursor: pointer;
+		        }
+		    }
+		    &_childElement {
+		        font-size: 12px;
+		        list-style: none;
+		    }
+		    .is-stateSelector {
+		        display: none;
+		    }
+		</textarea>
 	</div>
 </template>
 
 <script>
-	import jsonp from 'jsonp'
+	// import jsonp from 'jsonp'
+	import codemirror from 'codemirror'
 	export default {
 		name: 'component-code',
 		data () {
@@ -28,41 +41,49 @@
 		},
 		methods: {
 			lineClickHandler(number) {
-				let numbers = document.querySelectorAll('.js-line-number')
+				let numbers = document.querySelectorAll('.CodeMirror-linenumber')
 				numbers.forEach(function(nr) {
-					nr.parentElement.classList.remove('is-active-row')
+					nr.parentElement.parentElement.classList.remove('is-active-row')
 				})
-				number.parentElement.classList.add('is-active-row')
+				number.parentElement.parentElement.classList.add('is-active-row')
 				this.$store.dispatch('gistSetLine', number.dataset.lineNumber)
 				this.$store.dispatch('gistSetLineContent', number.parentElement.innerText.trim())
-				this.$store.dispatch('gistSetFile', number.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.querySelector('.gist-meta a').getAttribute('href'))
+				this.$store.dispatch('gistSetFile', 'testfile')
 			},
 			lineClickMapper() {
-				let numbers = document.querySelectorAll('.js-line-number')
+				let numbers = document.querySelectorAll('.CodeMirror-linenumber')
+				console.log(numbers)
 				numbers.forEach(function(number) {
 					number.addEventListener('click', function() {
 						this.lineClickHandler(number)
 					}.bind(this))
 				}.bind(this))
-			},
-			getGist(event) {
-				console.log(event)
-				this.show = false
-				jsonp('https://gist.github.com/' + this.gistId + '.json', null, function (err, data) {
-					if (err) {
-						console.error(err.message)
-					} else {
-						this.gistContent = data.div
-						this.gistStyle = data.stylesheet
-						setTimeout(this.lineClickMapper, 500)
-						this.$store.dispatch('gistSetActive', this.gistId)
-					}
-					this.show = true
-				}.bind(this))
 			}
+			// getGist(event) {
+			// 	console.log(event)
+			// 	this.show = false
+			// 	jsonp('https://gist.github.com/' + this.gistId + '.json', null, function (err, data) {
+			// 		if (err) {
+			// 			console.error(err.message)
+			// 		} else {
+			// 			this.gistContent = data.div
+			// 			this.gistStyle = data.stylesheet
+			// 			this.$store.dispatch('gistSetActive', this.gistId)
+			// 		}
+			// 		this.show = true
+			// 	}.bind(this))
+			// }
 		},
 		created() {
-			this.getGist()
+			setTimeout(function() {
+				let code = document.getElementById('myomy')
+				console.log(code)
+				codemirror.fromTextArea(code, {
+					lineNumbers: true,
+					readOnly: true
+				})
+				this.lineClickMapper()
+			}.bind(this), 1000)
 		}
 	}
 </script>
