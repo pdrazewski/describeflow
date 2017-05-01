@@ -1,0 +1,22 @@
+.hero {
+	padding-top: 64px;
+	&_content {
+		background: #0669aa;
+		color: #fff; 
+		padding: 50px 0;
+		font-size: 30px;
+		line-height: 40px;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 700;
+		@include breakpoint(tablet) {
+			font-size: 50px;
+			line-height: 55px;
+			padding: 70px 0;
+		}
+	}
+	span {
+		font-family: $font-secondary;
+		text-transform: lowercase;
+	}
+}

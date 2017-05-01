@@ -2,7 +2,7 @@
 	<header class="b-header">
 		<div class="b-header_primary is-content">
 			<div class="m-logo">
-				<h1><router-link to="/">_ DEFE</router-link></h1>
+				<h1><router-link to="/">_ DESCRIBE <span>flow</span></router-link></h1>
 			</div>
 			<ul class="m-menu">
 				<li class="m-menu_item" v-for="(item, index) in menu">
@@ -15,7 +15,7 @@
 					<template v-if="!logged">
 						<li class="m-menu_item">
 							<router-link  :to="'code-add'">
-						 		Add new content
+						 		Add new description
 						 	</router-link>
 					 	</li>
 						<li class="m-menu_item"><a href="#" v-on:click.prevent="signIn">Login</a></li>
@@ -24,7 +24,7 @@
 						<li class="m-menu_item"><p>Welcome {{logged}}</p></li>
 						<li class="m-menu_item">
 							<router-link  :to="'code-add'">
-						 		Add new content
+						 		Add new description
 						 	</router-link>
 					 	</li>
 					 	<li class="m-menu_item">

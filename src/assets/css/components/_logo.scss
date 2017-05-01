@@ -1,5 +1,5 @@
 .m-logo {
-	margin-top: 23px;
+	margin-top: 19px;
 	float: left;
 	h1 {
 		font-family: $font-primary;
@@ -10,7 +10,11 @@
       font-weight: 700;
       &:hover {
         text-decoration: none;
-        color: #ddd;
+      }
+      span {
+        font-family: $font-secondary;
+        font-size: 30px;
+        font-weight: 400;
       }
     }
 	}
