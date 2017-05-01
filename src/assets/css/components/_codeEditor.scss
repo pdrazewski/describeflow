@@ -1,0 +1,29 @@
+.c-codeEditor {
+	&_gistForm {
+		clear: both;
+		overflow: hidden;
+		padding: 10px 0;
+	}
+	&_gistId {
+		padding: 10px;
+		border: none;
+		background: #fff;
+		width: 75%;
+		float: left;
+		box-sizing: border-box;
+	}
+	&_gistSubmit {
+		float: left;
+		width: 25%;
+		padding: 8px;
+		border: none;
+		background: #057182;
+		color: #fff;
+		font-family: $font-primary;
+		font-size: 13px;
+		text-transform: uppercase;
+		&:hover {
+			background: #000;
+		}
+	}
+}

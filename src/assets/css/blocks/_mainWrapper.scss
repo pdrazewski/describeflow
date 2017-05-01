@@ -1,0 +1,32 @@
+.b-mainWrapper {
+	.b-mainWrapper_content {
+		padding-top: 50px;
+		padding-bottom: 30px;
+	}
+	&_primary {
+		float: right;
+		width: 49%;
+		padding-top: 5px;
+		font-size: 13px;
+		font-weight: 300;
+		line-height: 21px;
+		padding: 20px;
+		position: fixed;
+		top: 80px;
+		right: 20px;
+		box-sizing: border-box;
+		background: #fff;
+		margin-top: 10px;
+		height: calc(100vh - 115px);
+		h1 {
+			font-size: 38px;
+			font-weight: 600;
+			padding-bottom: 20px;
+			line-height: 44px;
+		}
+	}
+	&_secondary {
+		float: left;
+		width: 48%;
+	}
+}

@@ -1,0 +1,17 @@
+.m-logo {
+	margin-top: 23px;
+	float: left;
+	h1 {
+		font-family: $font-primary;
+		
+    a {
+      color: #fff;
+      font-size: 17px;
+      font-weight: 700;
+      &:hover {
+        text-decoration: none;
+        color: #ddd;
+      }
+    }
+	}
+}
