@@ -55,6 +55,9 @@
 				}, {
 					path: 'code-add',
 					name: 'Categories'
+				}, {
+					path: 'code-add',
+					name: 'Tags'
 				}]
 			}
 		},
