@@ -3,7 +3,7 @@
 		<block-header></block-header>
 		<div class="hero">
 			<div class="hero_content">
-				Describe your programing <span>flow</span>
+				Describe your {{flow}} <span>flow</span>
 			</div>
 		</div>
 		<div class="b-mainWrapper_content is-content">
@@ -82,6 +82,26 @@
 		components: {
 			blockHeader,
 			blockFooter
+		},
+		data() {
+			return {
+				items: ['Programming', 'Cooking', 'Coding', 'Learning', 'Training'],
+				flow: 'Programming',
+				start: 0
+			}
+		},
+		methods: {
+			flowItem() {
+				if (this.start === 4) {
+					this.start = 0
+				} else {
+					this.start++
+				}
+				this.flow = this.items[this.start]
+			}
+		},
+		created() {
+			setInterval(this.flowItem, 3000)
 		}
 	}
 </script>

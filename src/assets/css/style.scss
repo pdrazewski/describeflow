@@ -54,3 +54,10 @@ body {
 .is-active-row {
     background: yellow;
 }
+
+.header_menu{color:#fff;cursor:pointer;display:block;height:40px;right:-10px;margin:0 auto;position:relative;float:right;top:12px;width:40px;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+@media only screen and (min-width:68.75em){.header_menu{display:none}
+}
+.header_menu_line{background:#fff;height:1px;position:absolute;top:20px;left:50%;margin-left:-11px;width:22px;-webkit-transition:transform .1s ease-in-out,top .1s .1s ease-in-out,opacity .1s .2s ease-in-out;-moz-transition:transform .1s ease-in-out,top .1s .1s ease-in-out,opacity .1s .2s ease-in-out;-ms-transition:transform .1s ease-in-out,top .1s .1s ease-in-out,opacity .1s .2s ease-in-out;-o-transition:transform .1s ease-in-out,top .1s .1s ease-in-out,opacity .1s .2s ease-in-out;transition:transform .1s ease-in-out,top .1s .1s ease-in-out,opacity .1s .2s ease-in-out}
+.header_menu_line:first-of-type{top:14px}
+.header_menu_line:last-of-type{top:26px}
