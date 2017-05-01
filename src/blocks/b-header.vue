@@ -36,25 +36,22 @@
 					</template>
 				</li>
 			</ul>
-			<a href="#" class="header_menu" @click="toggleMenu()">
+			<div class="header_menu" @click="toggleMenu()">
 		        <div class="header_menu_line"></div>
 		        <div class="header_menu_line"></div>
 		        <div class="header_menu_line"></div>
-		    </a>
+		    </div>
 		</div>
 		<div class="header_nav">
             <ul>                             
                 <li class="mobile-only">
                     <ul> 
-                        <li><a class="header_sign_in_link sign_in_link" href="https://app.pluralsight.com/id?redirectTo=/">Sign in</a></li>
-                        <li><a class="header_sign_up_link" href="/pricing" data-aa-title="nav-signup-cta">Sign up</a></li>
-                        <li><a href="/browse">Browse courses</a></li>
-                        <li><a href="/learn">For individuals</a></li>
-                        <li><a href="/business">For business</a></li>
-                        <li><a href="http://help.pluralsight.com/help">Support</a></li>
-                        <li><a href="/contact">Contact</a></li>
-                        <li><a href="/careers">Careers</a></li>
-                        <li><a href="/thehub">Resource Center</a></li>
+                        <li><a href="#">Sign in</a></li>
+                        <li><a href="#">Sign up</a></li>
+                        <li><a href="#">Most popular</a></li>
+                        <li><a href="#">Newest</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">Tags</a></li>
                     </ul>
                 </li>
             </ul>

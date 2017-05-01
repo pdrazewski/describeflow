@@ -86,9 +86,9 @@ body {
 .header_nav ul li:before{content:""}
 @media only screen and (min-width:68.75em){.header_nav ul li{display:block}
 }
-.header_nav ul li ul{bottom:0;left:0;padding:20px 40px;position:absolute;right:0;top:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;-o-box-sizing:border-box;box-sizing:border-box;-webkit-overflow-scrolling:touch;-moz-overflow-scrolling:touch;-ms-overflow-scrolling:touch;-o-overflow-scrolling:touch;overflow-scrolling:touch}
+.header_nav ul li ul{bottom:0;left:0;padding:0 15px;position:absolute;right:0;top:30px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;-o-box-sizing:border-box;box-sizing:border-box;-webkit-overflow-scrolling:touch;-moz-overflow-scrolling:touch;-ms-overflow-scrolling:touch;-o-overflow-scrolling:touch;overflow-scrolling:touch}
 .header_nav ul li ul li{display:block;padding:0;width:100%}
-.header_nav ul li ul li a{color:#ddd;display:block;font-size:1.00rem;font-weight:300;line-height:1.50rem;opacity:0;padding:.5rem;text-decoration:none;-webkit-transform:scale(1.1) translateY(-24px);-ms-transform:scale(1.1) translateY(-24px);transform:scale(1.1) translateY(-24px);-webkit-transition:opacity .35s ease-out,-webkit-transform .35s ease-out;transition:opacity .35s ease-out,-webkit-transform .35s ease-out;transition:opacity .35s ease-out,transform .35s ease-out;transition:opacity .35s ease-out,transform .35s ease-out,-webkit-transform .35s ease-out}
+.header_nav ul li ul li a{color:#f4f4f4;display:block;font-size:18px;font-weight:300;line-height:1.50rem;opacity:0;padding:.5rem;text-decoration:none;-webkit-transform:scale(1.1) translateY(-24px);-ms-transform:scale(1.1) translateY(-24px);transform:scale(1.1) translateY(-24px);-webkit-transition:opacity .35s ease-out,-webkit-transform .35s ease-out;transition:opacity .35s ease-out,-webkit-transform .35s ease-out;transition:opacity .35s ease-out,transform .35s ease-out;transition:opacity .35s ease-out,transform .35s ease-out,-webkit-transform .35s ease-out}
 .header_nav ul li ul li:nth-child(14) a{-webkit-transition-delay:750ms,750ms;transition-delay:750ms,750ms}
 .header_nav ul li ul li:nth-child(13) a{-webkit-transition-delay:700ms,700ms;transition-delay:700ms,700ms}
 .header_nav ul li ul li:nth-child(12) a{-webkit-transition-delay:650ms,650ms;transition-delay:650ms,650ms}
