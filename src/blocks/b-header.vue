@@ -44,16 +44,12 @@
 		</div>
 		<div class="m-menu_mobile">
             <ul>                             
-                <li class="mobile-only">
-                    <ul> 
-                        <li><a href="#">Sign in</a></li>
-                        <li><a href="#">Sign up</a></li>
-                        <li><a href="#">Most popular</a></li>
-                        <li><a href="#">Newest</a></li>
-                        <li><a href="#">Categories</a></li>
-                        <li><a href="#">Tags</a></li>
-                    </ul>
-                </li>
+	            <li><a href="#">Sign in</a></li>
+	            <li><a href="#">Sign up</a></li>
+	            <li><a href="#">Most popular</a></li>
+	            <li><a href="#">Newest</a></li>
+	            <li><a href="#">Categories</a></li>
+	            <li><a href="#">Tags</a></li>
             </ul>
         </div>
 	</header>

@@ -3,7 +3,7 @@
 		<block-header></block-header>
 		<div class="hero">
 			<div class="hero_content">
-				Describe your {{flow}} <span>flow</span>
+				Describe your <span class="hero_contentType">{{flow}}</span> <span class="hero_contentFlow">flow</span>
 			</div>
 		</div>
 		<div class="b-mainWrapper_content is-content">

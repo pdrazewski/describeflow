@@ -72,79 +72,67 @@
 		visibility:visible
 	}
 	ul {
-		display:block;
-		margin:0;
-		padding:0;
-		width:100%;
-		table-layout:fixed;
-		@include breakpoint(tablet) {
-			display: table;
-		}
+		list-style: none;
+		bottom:0;
+		left:0;
+		padding:0 15px;
+		position:absolute;
+		right:0;
+		top:30px;
+		box-sizing:border-box;
+		overflow-scrolling:touch;
 		li {
-			margin:0;
 			box-sizing:border-box;
+			display:block;
+			padding:0;
+			width:100%;
+			a {
+				color: #f4f4f4;
+				display: block;
+				font-size: 18px;
+				font-weight: 300;
+				line-height: 1.50rem;
+				opacity:0;
+				padding: 7px 5px;
+				text-decoration:none;
+				-webkit-transform:scale(1.1) translateY(-24px);
+				-ms-transform:scale(1.1) translateY(-24px);
+				transform:scale(1.1) translateY(-24px);
+				-webkit-transition:opacity .35s ease-out,-webkit-transform .35s ease-out;
+				transition:opacity .35s ease-out,-webkit-transform .35s ease-out;
+				transition:opacity .35s ease-out,transform .35s ease-out;
+				transition:opacity .35s ease-out,transform .35s ease-out,-webkit-transform .35s ease-out;
+			}
+			&:nth-child(1) a {
+				-webkit-transition-delay: 100ms, 100ms;
+				transition-delay: 100ms, 100ms
+			}
+			&:nth-child(2) a {
+				-webkit-transition-delay: 150ms, 150ms;
+				transition-delay: 150ms, 150ms
+			}
+			&:nth-child(3) a {
+				-webkit-transition-delay: 200ms, 200ms;
+				transition-delay: 200ms, 200ms
+			}
+			&:nth-child(4) a {
+				-webkit-transition-delay: 250ms, 250ms;
+				transition-delay: 250ms, 250ms
+			}
+			&:nth-child(5) a {
+				-webkit-transition-delay: 300ms, 300ms;
+				transition-delay: 300ms, 300ms
+			}
+			&:nth-child(6) a {
+				-webkit-transition-delay: 350ms, 350ms;
+				transition-delay: 350ms, 350ms
+			}
+			&:nth-child(7) a {
+				-webkit-transition-delay: 400ms, 400ms;
+				transition-delay: 400ms, 400ms
+			}
 			@include breakpoint(tablet) {
 				display: none;
-			}
-			ul {
-				bottom:0;
-				left:0;
-				padding:0 15px;
-				position:absolute;
-				right:0;
-				top:30px;
-				box-sizing:border-box;
-				overflow-scrolling:touch;
-				li {
-					display:block;
-					padding:0;
-					width:100%;
-					a {
-						color:#f4f4f4;
-						display:block;
-						font-size:18px;
-						font-weight:300;
-						line-height:1.50rem;
-						opacity:0;
-						padding:.5rem;
-						text-decoration:none;
-						-webkit-transform:scale(1.1) translateY(-24px);
-						-ms-transform:scale(1.1) translateY(-24px);
-						transform:scale(1.1) translateY(-24px);
-						-webkit-transition:opacity .35s ease-out,-webkit-transform .35s ease-out;
-						transition:opacity .35s ease-out,-webkit-transform .35s ease-out;
-						transition:opacity .35s ease-out,transform .35s ease-out;
-						transition:opacity .35s ease-out,transform .35s ease-out,-webkit-transform .35s ease-out;
-					}
-					&:nth-child(1) a {
-						-webkit-transition-delay: 100ms, 100ms;
-						transition-delay: 100ms, 100ms
-					}
-					&:nth-child(2) a {
-						-webkit-transition-delay: 150ms, 150ms;
-						transition-delay: 150ms, 150ms
-					}
-					&:nth-child(3) a {
-						-webkit-transition-delay: 200ms, 200ms;
-						transition-delay: 200ms, 200ms
-					}
-					&:nth-child(4) a {
-						-webkit-transition-delay: 250ms, 250ms;
-						transition-delay: 250ms, 250ms
-					}
-					&:nth-child(5) a {
-						-webkit-transition-delay: 300ms, 300ms;
-						transition-delay: 300ms, 300ms
-					}
-					&:nth-child(6) a {
-						-webkit-transition-delay: 350ms, 350ms;
-						transition-delay: 350ms, 350ms
-					}
-					&:nth-child(7) a {
-						-webkit-transition-delay: 400ms, 400ms;
-						transition-delay: 400ms, 400ms
-					}
-				}
 			}
 		}
 	}
@@ -155,7 +143,7 @@
 		opacity:1;
 		pointer-events:auto;
 		visibility:visible;
-		ul li ul li a {
+		ul li a {
 			opacity:1;
 			transform:scale(1.0) translateY(0)
 		}
