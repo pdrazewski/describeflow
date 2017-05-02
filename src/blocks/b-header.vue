@@ -36,13 +36,13 @@
 					</template>
 				</li>
 			</ul>
-			<div class="m-menu_trigger" @click="toggleMenu()">
-		        <div class="m-menu_triggerLine"></div>
-		        <div class="m-menu_triggerLine"></div>
-		        <div class="m-menu_triggerLine"></div>
+			<div class="m-hmbg" @click="toggleMenu()">
+		        <div class="m-hmbg_item"></div>
+		        <div class="m-hmbg_item"></div>
+		        <div class="m-hmbg_item"></div>
 		    </div>
 		</div>
-		<div class="header_nav">
+		<div class="m-menu_mobile">
             <ul>                             
                 <li class="mobile-only">
                     <ul> 

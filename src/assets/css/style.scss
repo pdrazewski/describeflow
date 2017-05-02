@@ -5,22 +5,6 @@ $wrapperWidth: 100%;
 @import "./common/_colors";
 @import "./common/_fonts";
 
-//blocks
-@import "./blocks/_mainWrapper";
-@import "./blocks/_header";
-@import "./blocks/_footer";
-
-//componenets
-@import "./components/_logo";
-@import "./components/_menu";
-@import "./components/_grid";
-@import "./components/_codeEditor";
-@import "./components/_markdownBody";
-@import "./components/_hero";
-
-//plugins
-@import "./plugins/_codemirror";
-
 html, body {
     height:100%;
 }
@@ -36,6 +20,7 @@ body {
 	}
 }
 
+// wrapper for content
 .is-content {
     margin: 0 auto;
     max-width: $wrapperWidth;
@@ -51,9 +36,21 @@ body {
     }
 }
 
-.is-active-row {
-    background: yellow;
-}
+//blocks
+@import "./blocks/_mainWrapper";
+@import "./blocks/_header";
+@import "./blocks/_footer";
 
+//componenets
+@import "./components/_logo";
+@import "./components/_menu";
+@import "./components/_grid";
+@import "./components/_codeEditor";
+@import "./components/_markdownBody";
+@import "./components/_hero";
+@import "./components/_hamburger";
+
+//plugins
+@import "./plugins/_codemirror";
 
 
