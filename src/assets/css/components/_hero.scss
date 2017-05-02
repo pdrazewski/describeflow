@@ -1,7 +1,7 @@
 .hero {
 	padding-top: 64px;
 	&_content {
-		background: #0669aa;
+		background: #1e4770;
 		color: #fff; 
 		padding: 50px 20px;
 		font-size: 30px;
@@ -10,7 +10,7 @@
 		text-transform: uppercase;
 		font-weight: 700;
 		@include breakpoint(tablet) {
-			font-size: 40px;
+			font-size: 35px;
 			line-height: 45px;
 		}
 	}
@@ -21,10 +21,11 @@
 			line-height: 40px;
 			font-family: $font-primary;
 			letter-spacing: 3px;
+			font-weight: 300;
 			@include breakpoint(tablet) {
 				font-size: 70px;
 				padding-top: 5px;
-				line-height: 75px;
+				line-height: 75px; 
 			}
 		}
 		&.hero_contentFlow {
@@ -33,7 +34,7 @@
 			text-transform: lowercase;
 			font-weight: 400;
 			@include breakpoint(tablet) {
-				font-size: 40px;
+				font-size: 50px;
 			}
 		}
 	}
