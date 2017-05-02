@@ -36,10 +36,10 @@
 					</template>
 				</li>
 			</ul>
-			<div class="header_menu" @click="toggleMenu()">
-		        <div class="header_menu_line"></div>
-		        <div class="header_menu_line"></div>
-		        <div class="header_menu_line"></div>
+			<div class="m-menu_trigger" @click="toggleMenu()">
+		        <div class="m-menu_triggerLine"></div>
+		        <div class="m-menu_triggerLine"></div>
+		        <div class="m-menu_triggerLine"></div>
 		    </div>
 		</div>
 		<div class="header_nav">
@@ -124,10 +124,10 @@
 			toggleMenu() {
 				let body = document.getElementsByTagName('body')[0]
 				if (!this.mobileMenu) {
-					body.classList.add('header-menu-open')
+					body.classList.add('is-mobile-open')
 					this.mobileMenu = true
 				} else {
-					body.classList.remove('header-menu-open')
+					body.classList.remove('is-mobile-open')
 					this.mobileMenu = false
 				}
 			}
