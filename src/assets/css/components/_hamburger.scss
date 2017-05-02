@@ -10,7 +10,7 @@
 	top: 12px;
 	width: 40px;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
-	@include breakpoint(tablet) {
+	@include breakpoint(desktop_small) {
 		display: none;
 	}
 	.m-hmbg_item {

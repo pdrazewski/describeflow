@@ -3,7 +3,7 @@
 	float: left;
 	list-style: none;
 	display: none;
-	@include breakpoint(tablet) {
+	@include breakpoint(desktop_small) {
 		display: block;
 	}
 	&_item {
@@ -60,16 +60,9 @@
 	pointer-events:none;
 	transition:all .3s ease;
 	box-sizing:border-box;
-	@include breakpoint(tablet) {
-		background:transparent;
-		display:block;
-		float:left;
-		max-width:500px;
-		position:static;
-		width:65%;
-		opacity:1;
-		pointer-events:auto;
-		visibility:visible
+	display: block;
+	@include breakpoint(desktop_small) {
+		display:none;
 	}
 	ul {
 		list-style: none;
@@ -131,7 +124,7 @@
 				-webkit-transition-delay: 400ms, 400ms;
 				transition-delay: 400ms, 400ms
 			}
-			@include breakpoint(tablet) {
+			@include breakpoint(desktop_small) {
 				display: none;
 			}
 		}
