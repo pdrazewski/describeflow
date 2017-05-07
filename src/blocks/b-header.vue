@@ -2,7 +2,7 @@
 	<header class="b-header">
 		<div class="b-header_primary is-content">
 			<div class="m-logo">
-				<h1><router-link to="/">_ DESCRIBE <span>flow</span></router-link></h1>
+				<h1><router-link to="/">Describe <span>flow</span></router-link></h1>
 			</div>
 			<ul class="m-menu">
 				<li class="m-menu_item" v-for="(item, index) in menu">
