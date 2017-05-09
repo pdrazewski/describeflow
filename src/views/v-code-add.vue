@@ -1,5 +1,5 @@
 <template>
-	<viewBase class="v-index">
+	<viewBase class="v-code">
 		<template slot>
 			<div class="b-mainWrapper_secondary">
 				<component-code></component-code>

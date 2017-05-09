@@ -1,4 +1,5 @@
 <template>
+	<viewBase class="v-index">
 	<div class="b-mainWrapper">
 		<block-header></block-header>
 		<div class="hero">
@@ -70,6 +71,7 @@
 		</div>
 		<block-footer></block-footer>
 	</div>
+	</viewBase>
 </template>
 
 <script>

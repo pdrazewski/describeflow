@@ -1,6 +1,9 @@
 .b-mainWrapper {
 	.b-mainWrapper_content {
 		padding-bottom: 30px;
+		clear: both;
+		overflow: hidden;
+		padding-top: 64px;
 	}
 	&_primary {
 		float: right;
@@ -27,5 +30,12 @@
 	&_secondary {
 		float: left;
 		width: 48%;
+	}
+}
+.v-index {
+	.b-mainWrapper {
+		.b-mainWrapper_content {
+			padding-top: 0
+		}
 	}
 }
