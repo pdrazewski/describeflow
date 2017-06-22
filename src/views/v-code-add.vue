@@ -27,7 +27,7 @@
 		},
 		data() {
 			return {
-				newKey: '',
+				newKey: null,
 				saved: ''
 			}
 		},
