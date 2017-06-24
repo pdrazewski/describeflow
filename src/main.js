@@ -6,10 +6,10 @@ import VueRouter from 'vue-router'
 import store from './store/store.js'
 
 // routing
-import index from './views/v-index'
-import codeList from './views/v-code-list'
-import codeView from './views/v-code-view'
-import codeAdd from './views/v-code-add'
+import index from './views/v-index.vue'
+import codeList from './views/v-code-list.vue'
+import codeView from './views/v-code-view.vue'
+import codeAdd from './views/v-code-add.vue'
 
 Vue.use(VueRouter)
 

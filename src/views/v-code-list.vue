@@ -11,7 +11,7 @@
 </template>
 
 <script>
-	import viewBase from './v-base'
+	import viewBase from './v-base.vue'
 	import firebase from '../firebase.js'
 	export default {
 		name: 'view-code-list',

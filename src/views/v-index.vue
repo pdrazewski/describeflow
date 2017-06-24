@@ -73,12 +73,12 @@
 	</div>
 	</viewBase>
 </template>
-
+ 
 <script>
 	/* eslint-disable no-unused-vars, camelcase, func-call-spacing, no-unexpected-multiline */
 	/* eslint quotes: [0, { "avoidEscape": true }] */
-	import blockHeader from '../blocks/b-header'
-	import blockFooter from '../blocks/b-footer'
+	import blockHeader from '../blocks/b-header.vue'
+	import blockFooter from '../blocks/b-footer.vue' 
 	export default {
 		name: 'view-index',
 		components: {

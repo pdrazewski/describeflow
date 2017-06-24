@@ -9,8 +9,8 @@
 </template>
 
 <script>
-	import blockHeader from '../blocks/b-header'
-	import blockFooter from '../blocks/b-footer'
+	import blockHeader from '../blocks/b-header.vue'
+	import blockFooter from '../blocks/b-footer.vue'
 	export default {
 		name: 'view-base',
 		components: {
@@ -19,7 +19,3 @@
 		}
 	}
 </script>
-
-<style lang="scss">
-	@import "../assets/css/style.scss";
-</style>

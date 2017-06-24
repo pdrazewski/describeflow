@@ -14,9 +14,9 @@
 <script>
 	/* eslint-disable no-unused-vars, camelcase, func-call-spacing, no-unexpected-multiline */
 	/* eslint quotes: [0, { "avoidEscape": true }] */
-	import viewBase from './v-base'
-	import componentCode from '../components/c-code'
-	import componentDescription from '../components/c-description'
+	import viewBase from './v-base.vue'
+	import componentCode from '../components/c-code.vue'
+	import componentDescription from '../components/c-description.vue'
 	import firebase from '../firebase.js'
 	export default {
 		name: 'view-code-add',
