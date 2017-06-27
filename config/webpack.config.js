@@ -92,6 +92,6 @@ module.exports = {
     ],
     devServer: {
         inline: true,
-        port: 8004
+        port: 8889
     }
 };
