@@ -33,7 +33,7 @@ const helpers = {
 		})
 	},
 	onAuth: function() {
-		console.log(appFire)
+		
 	}
 }
 module.exports = {
